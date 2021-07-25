@@ -55,11 +55,11 @@ async function getQuotes() {
         newQuote();
     } catch (error){
         //Catch Error Here
+        console.log(error);
     }
 }
 
 // Tweet Quote
-
 function tweetQuote(){
     const twitterUrl=`https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
     window.open(twitterUrl,'_blank');
